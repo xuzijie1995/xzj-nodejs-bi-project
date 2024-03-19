@@ -10,5 +10,13 @@
   "devDependencies": {
     "@cubejs-backend/mysql-driver": "^0.35.1",
     "@cubejs-backend/server": "^0.35.1"
+  },
+  "dependencies": {
+    "@cubejs-backend/server-core": "^0.35.1",
+    "@cubejs-client/core": "^0.35.0",
+    "body-parser": "^1.20.2",
+    "cross-fetch": "^4.0.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3"
   }
 }
