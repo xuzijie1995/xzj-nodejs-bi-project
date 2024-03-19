@@ -1,0 +1,14 @@
+{
+  "name": "my-cubejs-project",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "cubejs-server"
+  },
+  "template": "docker",
+  "templateVersion": "0.35.1",
+  "devDependencies": {
+    "@cubejs-backend/mysql-driver": "^0.35.1",
+    "@cubejs-backend/server": "^0.35.1"
+  }
+}
