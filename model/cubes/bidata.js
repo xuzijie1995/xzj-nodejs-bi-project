@@ -23,7 +23,11 @@ cube(`bidata`, {
   measures: {
     count: {
       type: `count`
-    }
+    },
+    total: {
+      sql: `amount`,
+      type: `sum`,
+    },
   },
   
   pre_aggregations: {
