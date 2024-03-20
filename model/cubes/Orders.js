@@ -1,12 +1,17 @@
 // schema/Orders.js
 cube(`Orders`, {
-    sql: `SELECT * FROM orders`, // 定义查询数据的SQL语句
+    sql_table: `bidata.bidata`,
+  
+    data_source: `default`,
+    
+    joins: {
+      
+    },
     
     measures: {
       count: {
-        type: `count`,
-        drillMembers: [id, createdAt]
-      },
+        type: `count`
+      }
     },
     
     dimensions: {
@@ -18,6 +23,14 @@ cube(`Orders`, {
       createdAt: {
         sql: `created_at`,
         type: `time`
+      },
+      status: {
+        sql: `status`,
+        type: `number`
+      },
+      statusDesc: {
+        sql: `statusDesc`,
+        type: `String`
       }
     }
   });
