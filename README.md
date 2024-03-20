@@ -1,5 +1,7 @@
 Hello my bi project
 
+mysql 表mock数据一览
+
 ![Alt text](image-1.png)
 
 count 统计
@@ -38,7 +40,6 @@ docker-compose up -d --build
 停止
 docker-compose down
 
-
 description
 
 Cube.js 是一个开源的分析平台，专为开发人员设计，用于构建数据分析应用程序。它提供了一个强大的数据建模层，可以让你定义数据模型、度量和维度，同时提供了灵活的查询API，让前端应用可以轻松地请求这些数据。Cube.js 可以与任何SQL数据库如 PostgreSQL、MySQL、SQLite 以及一些大数据解决方案如 Apache Druid 和 ClickHouse 集成。
@@ -65,3 +66,19 @@ Cube.js 被广泛用于构建需要复杂数据处理和分析功能的企业级
 客户数据平台（CDP）
 实时数据监控和报警系统
 数据探索和报告工具
+
+
+
+
+【to do】
+
+![Alt text](image-5.png)
+
+embedded analytics
+
+react, vue front end web
+
+BI tools
+
+Superset
+Metabase
