@@ -1,40 +1,22 @@
-const express = require('express');
-const { CubejsServerCore } = require('@cubejs-backend/server-core');
-const path = require('path');
- 
-const expressApp = express();
- 
-const dbType = 'mysql';
-const options = {
-  dbType,
-  logger: (msg, params) => {
-    console.log(`${msg}: ${JSON.stringify(params)}`);
-  },
-  schemaPath: path.join('assets', 'schema')
-};
- 
-const core = CubejsServerCore.create(options);
-core.initApp(expressApp);
+const { CubejsApi } = require('@cubejs-client/core');
+const bodyParser = require('body-parser');
+const fetch = require('cross-fetch'); // 确保安装了 cross-fetch
 
-// const { CubejsApi } = require('@cubejs-client/core');
-// const bodyParser = require('body-parser');
-// const fetch = require('cross-fetch'); // 确保安装了 cross-fetch
+const app = express();
+require('dotenv').config();
 
-// const app = express();
-// require('dotenv').config();
+// 创建Cube.js实例
+const cubejsServer = CubejsServerCore.create();
 
-// // 创建Cube.js实例
-// const cubejsServer = CubejsServerCore.create();
-
-// app.use(require('cors')());
-// app.use(bodyParser.json({ limit: '50mb' }));
+app.use(require('cors')());
+app.use(bodyParser.json({ limit: '50mb' }));
 
 
-// app.get('/', (req, res) => {
-//     res.send('Hello World!');
-//   });
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+  });
   
-// // Cube.js的API端点
+// Cube.js的API端点
 // app.post('/cubejs-api/v1/load', (req, res) => {
 //     cubejsServer.apiGateway.load(
 //     req.body,
@@ -43,7 +25,7 @@ core.initApp(expressApp);
 //     ).then((result) => res.json(result), (err) => res.status(500).json({ error: err.toString() }));
 // });
 
-// // 封装 /data 路由
+// 封装 /data 路由
 // app.get('/data', async (req, res) => {
 //     try {
 //         // 确保使用正确的方法来获取API对象，这里使用 cubejsServer 的api() 方法
