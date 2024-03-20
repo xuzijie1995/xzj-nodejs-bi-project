@@ -10,3 +10,15 @@ count 统计
 金额 计总
 ![Alt text](image-3.png)
 ![Alt text](image-2.png)
+
+install
+
+require
+1. docker
+2. mysql / other db
+
+运行
+docker-compose up -d --build
+
+停止
+docker-compose down
